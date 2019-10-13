@@ -3,7 +3,7 @@
     <HEAD>
     
     <TITLE>Your Title Here</TITLE>
-    <script>
+    <script type="text/javascript"> 
         !function(t,e,n,s,a,c,i,o,p){t.AppsFlyerSdkObject=a,t.AF=t.AF||function(){
         (t.AF.q=t.AF.q||[]).push([Date.now()].concat(Array.prototype.slice.call(arguments)))},
         t.AF.id=t.AF.id||i,t.AF.plugins={},o=e.createElement(n),p=e.getElementsByTagName(n)[0],o.async=1,
@@ -37,7 +37,13 @@
     <BR> <B><I>This is a new sentence without a paragraph break, in bold italics.</I></B>
     
     <HR>
-    
+    <script type="text/javascript">
+        (function event1(){
+            setTimeout(function(){
+                AF('pba', 'event', {eventType: 'EVENT', eventName: 'First_View', eventLabel: 'page_view',  eventRevenue: 0.01});
+            },5000);
+        })();
+    </script>
     </BODY>
     
     </HTML>
